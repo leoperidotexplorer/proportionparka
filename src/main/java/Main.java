@@ -1,6 +1,6 @@
 import java.util.*;
 public class Main {
-    private static final String FSM = "ClusterNode_3122e5";
+    private static final String FSM = "ClusterNode_ca1ed7";
     enum State { INIT, READY, RUNNING, STOPPED, ERROR }
     private static final Map<State, Set<State>> TRANSITIONS = Map.of(State.INIT, Set.of(State.READY), State.READY, Set.of(State.RUNNING, State.STOPPED), State.RUNNING, Set.of(State.STOPPED, State.ERROR), State.STOPPED, Set.of(State.READY), State.ERROR, Set.of(State.INIT));
     private State current = State.INIT;
